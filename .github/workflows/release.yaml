@@ -18,9 +18,9 @@ jobs:
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v2
       - name: Restore NuGet
-        run: nuget restore "Malis Mission Roller 2.sln"
+        run: nuget restore "Malis Grid Navigator.sln"
       - name: Build
-        run: msbuild "Malis Mission Roller 2.sln" /p:Configuration=Release
+        run: msbuild "Malis Grid Navigator.sln" /p:Configuration=Release
       - name: Write version file
         run: echo ${{ github.ref_name }} > "bin/Release/GridNavigator.version"
       - name: Package release DLL
